@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.7cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem,tabularx,booktabs,array,longtable}
+\usepackage{graphicx}\usepackage{tikz}\renewcommand{\labelitemi}{$\bullet$}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,positioning,calc}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{3pt}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small COURSE CODE -- CIE Answer Book}\rhead{\small Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newtcolorbox{qbox}[1]{enhanced,breakable,colback=blue!3,colframe=blue!45!black,
+  title={#1},fonttitle=\bfseries\small,boxrule=0.6pt,arc=2pt,left=5pt,right=5pt,top=3pt,bottom=3pt,before skip=9pt,after skip=3pt}
+\newtcolorbox{tipbox}[1]{enhanced,breakable,colback=orange!6,colframe=orange!70!black,title={#1},fonttitle=\bfseries\small,boxrule=0.6pt,arc=2pt}
+\newcommand{\ans}{\textbf{\color{blue!45!black}Answer.}\ }
+\newcommand{\hp}{\hfill\textit{Hence proved.}}
+\newcommand{\sss}{$\bigstar\bigstar\bigstar$}
+\newcommand{\ssn}{$\bigstar\bigstar$}
+\newcommand{\sn}{$\bigstar$}
+\newcommand{\src}[1]{\hspace{1em plus 1fill}{\normalfont\footnotesize #1}}
+\newcommand{\ee}[2]{#1\times10^{#2}}
+\newcommand{\cc}[1]{\texttt{#1}}
+
+% ---- answer-book box (default for every question) ----
+% \begin{qa}{Q. question in exam wording}{5 marks}{Asked: CIE-1 2025 Q2(c); Assignment 1 Ch.2 Q3}
+%   \A  answer exactly as it should be written ...  \fans{boxed final answer}
+% \end{qa}
+\definecolor{qbg}{RGB}{232,240,252}
+\newtcolorbox{qa}[3]{enhanced,breakable,colback=white,colframe=blue!55!black,colbacktitle=qbg,coltitle=black,
+  title={\textbf{#1}\hfill{\normalfont\bfseries[#2]}},fonttitle=\normalsize,boxrule=0.7pt,arc=2pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,before skip=12pt,after skip=4pt,
+  before upper={{\footnotesize\color{gray!70!black}\textit{#3}}\par\smallskip}}
+\newcommand{\A}{{\color{green!40!black}\textbf{Answer:}}\par\smallskip}
+\newcommand{\hd}[1]{\par\smallskip\textbf{#1}\par}
+\newcommand{\fans}[1]{\par\smallskip\fcolorbox{green!50!black}{green!6}{\parbox{0.95\linewidth}{\textbf{Final answer:} #1}}\par}
+
+% ---- code listings (C) ----
+\usepackage{listings}
+\lstdefinestyle{c}{language=C,basicstyle=\ttfamily\footnotesize,keywordstyle=\color{blue!70!black}\bfseries,
+ commentstyle=\color{green!45!black}\itshape,stringstyle=\color{red!60!black},showstringspaces=false,
+ columns=fullflexible,keepspaces=true,frame=single,rulecolor=\color{gray!50},backgroundcolor=\color{gray!4},breaklines=true}
+\lstdefinestyle{out}{basicstyle=\ttfamily\footnotesize,columns=fullflexible,keepspaces=true,frame=leftline,
+ rulecolor=\color{orange!70!black},framerule=2pt,backgroundcolor=\color{orange!5},breaklines=true,
+ title={\footnotesize\textbf{Actual output (gcc)}}}
+\lstset{style=c}
+
+% Usage: qa (above) is the default: question in exam wording + marks + source line, then \A and the answer.
+%        Put the star in the question title, e.g. \begin{qa}{\sss{} Q. ...}{5 marks}{Asked: ...}.
+%        No cross-references between boxes: repeat a figure/table instead of writing "see A4".
+%        qbox (older compact style): \begin{qbox}{ID \sss{} Question text\src{source tags}} answer \end{qbox}
+%        \begin{tipbox}{Title} ... \end{tipbox}
+%        Stars: \sss (past paper / assignment), \ssn (syllabus/bank), \sn (notes only)
+\begin{document}
+
+% --- title, read-first box, evidence table, answers, study-order box ---
+\end{document}
