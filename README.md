@@ -1,3 +1,30 @@
+# GIVE THIS TO YOUR AI AGENT
+
+Copy the prompt below and paste it into Claude Code (or any AI agent that can run terminal commands). It downloads and installs the skill, then asks you for your exam material.
+
+```text
+Set up the CIE skill from https://github.com/Auenchanters/CIE_skill and use it to make my exam answer book.
+
+1. Get the repo. If there is no CIE_skill folder here, run:
+   git clone https://github.com/Auenchanters/CIE_skill.git
+   If it is already here, run git pull inside it to get the latest version.
+2. Install the skill. Copy the CIE_skill/cie-skill folder into ~/.claude/skills/
+   (on Windows: %USERPROFILE%\.claude\skills\), replacing any older copy.
+   If you are not Claude Code, read cie-skill/SKILL.md and the files in
+   cie-skill/references/ and follow them as your instructions instead.
+3. Check the tools the skill needs: Python 3 with Pillow, pdflatex with the
+   tcolorbox, listings and tikz packages, poppler-utils (pdftoppm, pdfinfo,
+   pdffonts) and gcc. Install anything missing, or tell me exactly what to install.
+4. Ask me for my material: the course and exam date, the model question paper,
+   past CIE/SEE papers, the question bank, the syllabus (the official portion
+   for this test), my notes (PDFs, slides, Word files or photos), and anything
+   extra such as the teacher's assignment. Wait for my reply.
+5. Using the cie-skill skill, build my PDF answer book from what I send,
+   following SKILL.md step by step.
+```
+
+---
+
 # CIE Skill: exam answer books with Claude
 
 A [Claude skill](https://support.claude.com/en/articles/12512180-using-skills-in-claude) that turns your course material into a **PDF answer book** for a college internal exam (CIE / IA / mid-term / SEE). Every likely question is written in exam wording with its marks, followed by the answer exactly as you should write it, using your class's own diagrams. Every program is compiled and every numerical is computed. After the exam, it scores how close it got.
